@@ -9,16 +9,11 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         loader: "babel-loader",
         options: {
-          presets: ["react", "es2015"],
+          presets: ["@babel/preset-react"],
         },
-      },
-      // use the style-loader/css-loader combos for anything matching the .css extension
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
       },
     ],
   },
